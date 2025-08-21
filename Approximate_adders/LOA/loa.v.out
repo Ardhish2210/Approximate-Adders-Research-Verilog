@@ -1,0 +1,47 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000027f578f2ce0 .scope module, "loa_8bit" "loa_8bit" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "a";
+    .port_info 1 /INPUT 8 "b";
+    .port_info 2 /OUTPUT 9 "sum";
+L_0000027f57a0b740 .functor OR 4, L_0000027f57921910, L_0000027f579219b0, C4<0000>, C4<0000>;
+v0000027f578f34b0_0 .net *"_ivl_14", 3 0, L_0000027f57921af0;  1 drivers
+v0000027f578f36f0_0 .net *"_ivl_15", 4 0, L_0000027f57921b90;  1 drivers
+L_0000027f5796bc28 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000027f578f2e70_0 .net *"_ivl_18", 0 0, L_0000027f5796bc28;  1 drivers
+v0000027f578f2f10_0 .net *"_ivl_20", 3 0, L_0000027f57921c30;  1 drivers
+v0000027f578f2fb0_0 .net *"_ivl_21", 4 0, L_0000027f57921690;  1 drivers
+L_0000027f5796bc70 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000027f578f3050_0 .net *"_ivl_24", 0 0, L_0000027f5796bc70;  1 drivers
+v0000027f57a0ec80_0 .net *"_ivl_25", 4 0, L_0000027f579214b0;  1 drivers
+v0000027f57a0ed20_0 .net *"_ivl_3", 3 0, L_0000027f57921910;  1 drivers
+v0000027f57a0edc0_0 .net *"_ivl_5", 3 0, L_0000027f579219b0;  1 drivers
+v0000027f579212d0_0 .net *"_ivl_6", 3 0, L_0000027f57a0b740;  1 drivers
+v0000027f57921410_0 .net *"_ivl_8", 4 0, L_0000027f57921cd0;  1 drivers
+o0000027f579271c8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0000027f57921eb0_0 .net "a", 7 0, o0000027f579271c8;  0 drivers
+o0000027f579271f8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0000027f57921f50_0 .net "b", 7 0, o0000027f579271f8;  0 drivers
+v0000027f57921550_0 .net "sum", 8 0, L_0000027f57921a50;  1 drivers
+L_0000027f57921910 .part o0000027f579271c8, 0, 4;
+L_0000027f579219b0 .part o0000027f579271f8, 0, 4;
+L_0000027f57921a50 .concat8 [ 4 5 0 0], L_0000027f57a0b740, L_0000027f57921cd0;
+L_0000027f57921cd0 .part L_0000027f579214b0, 0, 5;
+L_0000027f57921af0 .part o0000027f579271c8, 4, 4;
+L_0000027f57921b90 .concat [ 4 1 0 0], L_0000027f57921af0, L_0000027f5796bc28;
+L_0000027f57921c30 .part o0000027f579271f8, 4, 4;
+L_0000027f57921690 .concat [ 4 1 0 0], L_0000027f57921c30, L_0000027f5796bc70;
+L_0000027f579214b0 .arith/sum 5, L_0000027f57921b90, L_0000027f57921690;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "loa.v";

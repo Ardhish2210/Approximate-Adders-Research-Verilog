@@ -1,0 +1,52 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001eac3baa790 .scope module, "oloca_8bit" "oloca_8bit" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "a";
+    .port_info 1 /INPUT 8 "b";
+    .port_info 2 /OUTPUT 9 "sum";
+P_000001eac3ba9590 .param/l "APPROX_BITS" 0 2 1, +C4<00000000000000000000000000000100>;
+L_000001eac3be6ef0 .functor OR 4, L_000001eac3c3e580, L_000001eac3c3e760, C4<0000>, C4<0000>;
+L_000001eac3c3f090 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001eac3baa920_0 .net/2u *"_ivl_12", 0 0, L_000001eac3c3f090;  1 drivers
+v000001eac3bc30e0_0 .net *"_ivl_14", 4 0, L_000001eac3c3e3a0;  1 drivers
+L_000001eac3c3f0d8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001eac3ba9b70_0 .net/2u *"_ivl_16", 0 0, L_000001eac3c3f0d8;  1 drivers
+v000001eac3baaa70_0 .net *"_ivl_18", 4 0, L_000001eac3c3e800;  1 drivers
+v000001eac3ba98c0_0 .net *"_ivl_20", 4 0, L_000001eac3c3e8a0;  1 drivers
+L_000001eac3c3f120 .functor BUFT 1, C4<00000>, C4<0>, C4<0>, C4<0>;
+v000001eac3be64e0_0 .net *"_ivl_22", 4 0, L_000001eac3c3f120;  1 drivers
+o000001eac3bf70c8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v000001eac3bf4910_0 .net "a", 7 0, o000001eac3bf70c8;  0 drivers
+v000001eac3bf49b0_0 .net "a_high", 3 0, L_000001eac3c3e1c0;  1 drivers
+v000001eac3c3e620_0 .net "a_low", 3 0, L_000001eac3c3e580;  1 drivers
+v000001eac3c3eda0_0 .net "accurate_sum", 4 0, L_000001eac3c3ebc0;  1 drivers
+v000001eac3c3e4e0_0 .net "approx_sum", 3 0, L_000001eac3be6ef0;  1 drivers
+o000001eac3bf71b8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v000001eac3c3e080_0 .net "b", 7 0, o000001eac3bf71b8;  0 drivers
+v000001eac3c3e260_0 .net "b_high", 3 0, L_000001eac3c3e300;  1 drivers
+v000001eac3c3e6c0_0 .net "b_low", 3 0, L_000001eac3c3e760;  1 drivers
+L_000001eac3c3f048 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001eac3c3e440_0 .net "const_carry", 0 0, L_000001eac3c3f048;  1 drivers
+v000001eac3c3e120_0 .net "sum", 8 0, L_000001eac3c3e940;  1 drivers
+L_000001eac3c3e580 .part o000001eac3bf70c8, 0, 4;
+L_000001eac3c3e760 .part o000001eac3bf71b8, 0, 4;
+L_000001eac3c3e1c0 .part o000001eac3bf70c8, 4, 4;
+L_000001eac3c3e300 .part o000001eac3bf71b8, 4, 4;
+L_000001eac3c3e3a0 .concat [ 4 1 0 0], L_000001eac3c3e1c0, L_000001eac3c3f090;
+L_000001eac3c3e800 .concat [ 4 1 0 0], L_000001eac3c3e300, L_000001eac3c3f0d8;
+L_000001eac3c3e8a0 .arith/sum 5, L_000001eac3c3e3a0, L_000001eac3c3e800;
+L_000001eac3c3ebc0 .arith/sum 5, L_000001eac3c3e8a0, L_000001eac3c3f120;
+L_000001eac3c3e940 .concat [ 4 5 0 0], L_000001eac3be6ef0, L_000001eac3c3ebc0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "oloca.v";

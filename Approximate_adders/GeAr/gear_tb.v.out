@@ -1,0 +1,207 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002b702a3cf80 .scope module, "tb_gear_adder_8bit" "tb_gear_adder_8bit" 2 4;
+ .timescale -9 -12;
+v000002b7029b1960_0 .var/real "AE", 0 0;
+v000002b7029b1140_0 .var/real "MAE", 0 0;
+v000002b7029b1320_0 .var/real "MEP", 0 0;
+v000002b7029b10a0_0 .var/real "MSE", 0 0;
+v000002b7029b1dc0_0 .var/real "RMSE", 0 0;
+v000002b7029b13c0_0 .var "a", 7 0;
+v000002b7029b1a00_0 .var/i "abs_error", 31 0;
+v000002b7029b15a0_0 .var/real "abs_error_sum", 0 0;
+v000002b7029b1be0_0 .net "approx_sum", 8 0, L_000002b7029b2f10;  1 drivers
+v000002b7029b1f00_0 .var "b", 7 0;
+v000002b7029b1460_0 .var/i "error_count", 31 0;
+v000002b7029b1aa0_0 .var/real "error_sum", 0 0;
+v000002b7029b11e0_0 .var/i "error_val", 31 0;
+v000002b7029b1e60_0 .var "exact_sum", 8 0;
+v000002b7029b1500_0 .var/i "i", 31 0;
+v000002b7029b1640_0 .var/i "j", 31 0;
+v000002b7029b1b40_0 .var/real "sq_error_sum", 0 0;
+v000002b7029b1c80_0 .var/i "total_cases", 31 0;
+S_000002b702a3d110 .scope module, "uut" "gear_adder_8bit" 2 11, 3 5 0, S_000002b702a3cf80;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 8 "a";
+    .port_info 1 /INPUT 8 "b";
+    .port_info 2 /OUTPUT 9 "sum";
+L_000002b70295a220 .functor XOR 4, L_000002b7029b2e70, L_000002b7029b3b90, C4<0000>, C4<0000>;
+v000002b702923510_0 .net *"_ivl_1", 3 0, L_000002b7029b2e70;  1 drivers
+L_000002b7029b4078 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000002b702923750_0 .net *"_ivl_11", 0 0, L_000002b7029b4078;  1 drivers
+v000002b702923120_0 .net *"_ivl_13", 3 0, L_000002b7029b2d30;  1 drivers
+v000002b70294de70_0 .net *"_ivl_14", 4 0, L_000002b7029b25b0;  1 drivers
+L_000002b7029b40c0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000002b70294df10_0 .net *"_ivl_17", 0 0, L_000002b7029b40c0;  1 drivers
+v000002b70294dfb0_0 .net *"_ivl_3", 3 0, L_000002b7029b3b90;  1 drivers
+v000002b70294e050_0 .net *"_ivl_7", 3 0, L_000002b7029b2a10;  1 drivers
+v000002b70294e0f0_0 .net *"_ivl_8", 4 0, L_000002b7029b3f50;  1 drivers
+v000002b7029b16e0_0 .net "a", 7 0, v000002b7029b13c0_0;  1 drivers
+v000002b7029b1280_0 .net "acc", 4 0, L_000002b7029b21f0;  1 drivers
+v000002b7029b1820_0 .net "acc_sum", 3 0, L_000002b7029b2150;  1 drivers
+v000002b7029b1fa0_0 .net "approx_sum", 3 0, L_000002b70295a220;  1 drivers
+v000002b7029b1780_0 .net "b", 7 0, v000002b7029b1f00_0;  1 drivers
+v000002b7029b18c0_0 .net "carry_out", 0 0, L_000002b7029b3e10;  1 drivers
+v000002b7029b1d20_0 .net "sum", 8 0, L_000002b7029b2f10;  alias, 1 drivers
+L_000002b7029b2e70 .part v000002b7029b13c0_0, 0, 4;
+L_000002b7029b3b90 .part v000002b7029b1f00_0, 0, 4;
+L_000002b7029b2a10 .part v000002b7029b13c0_0, 4, 4;
+L_000002b7029b3f50 .concat [ 4 1 0 0], L_000002b7029b2a10, L_000002b7029b4078;
+L_000002b7029b2d30 .part v000002b7029b1f00_0, 4, 4;
+L_000002b7029b25b0 .concat [ 4 1 0 0], L_000002b7029b2d30, L_000002b7029b40c0;
+L_000002b7029b21f0 .arith/sum 5, L_000002b7029b3f50, L_000002b7029b25b0;
+L_000002b7029b2150 .part L_000002b7029b21f0, 0, 4;
+L_000002b7029b3e10 .part L_000002b7029b21f0, 4, 1;
+L_000002b7029b2f10 .concat [ 4 4 1 0], L_000002b70295a220, L_000002b7029b2150, L_000002b7029b3e10;
+    .scope S_000002b702a3cf80;
+T_0 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v000002b7029b1460_0, 0, 32;
+    %pushi/real 0, 4065; load=0.00000
+    %store/real v000002b7029b1aa0_0;
+    %pushi/real 0, 4065; load=0.00000
+    %store/real v000002b7029b15a0_0;
+    %pushi/real 0, 4065; load=0.00000
+    %store/real v000002b7029b1b40_0;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v000002b7029b1c80_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v000002b7029b1500_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v000002b7029b1500_0;
+    %cmpi/s 256, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v000002b7029b1640_0, 0, 32;
+T_0.2 ;
+    %load/vec4 v000002b7029b1640_0;
+    %cmpi/s 256, 0, 32;
+    %jmp/0xz T_0.3, 5;
+    %load/vec4 v000002b7029b1500_0;
+    %pad/s 8;
+    %store/vec4 v000002b7029b13c0_0, 0, 8;
+    %load/vec4 v000002b7029b1640_0;
+    %pad/s 8;
+    %store/vec4 v000002b7029b1f00_0, 0, 8;
+    %delay 1000, 0;
+    %load/vec4 v000002b7029b13c0_0;
+    %pad/u 9;
+    %load/vec4 v000002b7029b1f00_0;
+    %pad/u 9;
+    %add;
+    %store/vec4 v000002b7029b1e60_0, 0, 9;
+    %load/vec4 v000002b7029b1be0_0;
+    %pad/u 32;
+    %load/vec4 v000002b7029b1e60_0;
+    %pad/u 32;
+    %sub;
+    %store/vec4 v000002b7029b11e0_0, 0, 32;
+    %load/vec4 v000002b7029b11e0_0;
+    %cmpi/s 0, 0, 32;
+    %flag_mov 8, 5;
+    %jmp/0 T_0.4, 8;
+    %load/vec4 v000002b7029b11e0_0;
+    %inv;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %jmp/1 T_0.5, 8;
+T_0.4 ; End of true expr.
+    %load/vec4 v000002b7029b11e0_0;
+    %jmp/0 T_0.5, 8;
+ ; End of false expr.
+    %blend;
+T_0.5;
+    %store/vec4 v000002b7029b1a00_0, 0, 32;
+    %load/vec4 v000002b7029b11e0_0;
+    %cmpi/ne 0, 0, 32;
+    %jmp/0xz  T_0.6, 4;
+    %load/vec4 v000002b7029b1460_0;
+    %addi 1, 0, 32;
+    %store/vec4 v000002b7029b1460_0, 0, 32;
+T_0.6 ;
+    %load/real v000002b7029b1aa0_0;
+    %load/vec4 v000002b7029b11e0_0;
+    %cvt/rv/s;
+    %add/wr;
+    %store/real v000002b7029b1aa0_0;
+    %load/real v000002b7029b15a0_0;
+    %load/vec4 v000002b7029b1a00_0;
+    %cvt/rv/s;
+    %add/wr;
+    %store/real v000002b7029b15a0_0;
+    %load/real v000002b7029b1b40_0;
+    %load/vec4 v000002b7029b11e0_0;
+    %load/vec4 v000002b7029b11e0_0;
+    %mul;
+    %cvt/rv/s;
+    %add/wr;
+    %store/real v000002b7029b1b40_0;
+    %load/vec4 v000002b7029b1c80_0;
+    %addi 1, 0, 32;
+    %store/vec4 v000002b7029b1c80_0, 0, 32;
+    %load/vec4 v000002b7029b1640_0;
+    %addi 1, 0, 32;
+    %store/vec4 v000002b7029b1640_0, 0, 32;
+    %jmp T_0.2;
+T_0.3 ;
+    %load/vec4 v000002b7029b1500_0;
+    %addi 1, 0, 32;
+    %store/vec4 v000002b7029b1500_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %load/real v000002b7029b1aa0_0;
+    %load/vec4 v000002b7029b1c80_0;
+    %cvt/rv/s;
+    %div/wr;
+    %store/real v000002b7029b1960_0;
+    %load/real v000002b7029b15a0_0;
+    %load/vec4 v000002b7029b1c80_0;
+    %cvt/rv/s;
+    %div/wr;
+    %store/real v000002b7029b1140_0;
+    %load/real v000002b7029b1b40_0;
+    %load/vec4 v000002b7029b1c80_0;
+    %cvt/rv/s;
+    %div/wr;
+    %store/real v000002b7029b10a0_0;
+    %vpi_func/r 2 60 "$sqrt", v000002b7029b10a0_0 {0 0 0};
+    %store/real v000002b7029b1dc0_0;
+    %load/real v000002b7029b1140_0;
+    %pushi/real 2139095040, 4074; load=510.000
+    %div/wr;
+    %pushi/real 1677721600, 4072; load=100.000
+    %mul/wr;
+    %store/real v000002b7029b1320_0;
+    %vpi_call 2 63 "$display", "============================================" {0 0 0};
+    %vpi_call 2 64 "$display", "GeAr 8-bit Approximate Adder Error Metrics" {0 0 0};
+    %vpi_call 2 65 "$display", "Total Cases             = %0d", v000002b7029b1c80_0 {0 0 0};
+    %load/vec4 v000002b7029b1460_0;
+    %cvt/rv/s;
+    %pushi/real 1677721600, 4072; load=100.000
+    %mul/wr;
+    %load/vec4 v000002b7029b1c80_0;
+    %cvt/rv/s;
+    %div/wr;
+    %vpi_call 2 66 "$display", "Error Rate (ER)         = %0.4f %%", W<0,r> {0 1 0};
+    %vpi_call 2 67 "$display", "Average Error (AE)      = %0.4f", v000002b7029b1960_0 {0 0 0};
+    %vpi_call 2 68 "$display", "Mean Abs Error (MAE/MED)= %0.4f", v000002b7029b1140_0 {0 0 0};
+    %vpi_call 2 69 "$display", "Mean Square Error (MSE) = %0.4f", v000002b7029b10a0_0 {0 0 0};
+    %vpi_call 2 70 "$display", "Root MSE (RMSE)         = %0.4f", v000002b7029b1dc0_0 {0 0 0};
+    %vpi_call 2 71 "$display", "Mean Error Percentage   = %0.4f %%", v000002b7029b1320_0 {0 0 0};
+    %vpi_call 2 72 "$display", "============================================" {0 0 0};
+    %vpi_call 2 74 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "gear_tb.v";
+    "./gear.v";

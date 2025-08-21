@@ -1,0 +1,45 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000019fac722ce0 .scope module, "hoaaned_8bit" "hoaaned_8bit" 2 2;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "a";
+    .port_info 1 /INPUT 8 "b";
+    .port_info 2 /OUTPUT 9 "sum";
+L_0000019fac708700 .functor OR 4, L_0000019fac751f90, L_0000019fac751c70, C4<0000>, C4<0000>;
+v0000019fac7234b0_0 .net *"_ivl_1", 3 0, L_0000019fac751f90;  1 drivers
+L_0000019fac79bc48 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000019fac7236f0_0 .net *"_ivl_11", 0 0, L_0000019fac79bc48;  1 drivers
+v0000019fac708980_0 .net *"_ivl_13", 3 0, L_0000019fac752030;  1 drivers
+v0000019fac708660_0 .net *"_ivl_14", 4 0, L_0000019fac751d10;  1 drivers
+L_0000019fac79bc90 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000019fac70bb90_0 .net *"_ivl_17", 0 0, L_0000019fac79bc90;  1 drivers
+v0000019fac70bc30_0 .net *"_ivl_3", 3 0, L_0000019fac751c70;  1 drivers
+v0000019fac70bcd0_0 .net *"_ivl_7", 3 0, L_0000019fac751ef0;  1 drivers
+v0000019fac70bd70_0 .net *"_ivl_8", 4 0, L_0000019fac751db0;  1 drivers
+o0000019fac757158 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0000019fac722e70_0 .net "a", 7 0, o0000019fac757158;  0 drivers
+v0000019fac722fa0_0 .net "accurate_sum", 4 0, L_0000019fac752210;  1 drivers
+v0000019fac751e50_0 .net "approx_sum", 3 0, L_0000019fac708700;  1 drivers
+o0000019fac7571e8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0000019fac752170_0 .net "b", 7 0, o0000019fac7571e8;  0 drivers
+v0000019fac751a90_0 .net "sum", 8 0, L_0000019fac7518b0;  1 drivers
+L_0000019fac751f90 .part o0000019fac757158, 0, 4;
+L_0000019fac751c70 .part o0000019fac7571e8, 0, 4;
+L_0000019fac751ef0 .part o0000019fac757158, 4, 4;
+L_0000019fac751db0 .concat [ 4 1 0 0], L_0000019fac751ef0, L_0000019fac79bc48;
+L_0000019fac752030 .part o0000019fac7571e8, 4, 4;
+L_0000019fac751d10 .concat [ 4 1 0 0], L_0000019fac752030, L_0000019fac79bc90;
+L_0000019fac752210 .arith/sum 5, L_0000019fac751db0, L_0000019fac751d10;
+L_0000019fac7518b0 .concat [ 4 5 0 0], L_0000019fac708700, L_0000019fac752210;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "hoaaned.v";

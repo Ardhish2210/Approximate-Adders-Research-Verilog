@@ -1,0 +1,73 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001cb9434bb60 .scope module, "hoeraa_8bit" "hoeraa_8bit" 2 2;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "a";
+    .port_info 1 /INPUT 8 "b";
+    .port_info 2 /OUTPUT 9 "sum";
+L_000001cb9434ed00 .functor OR 1, L_000001cb94251460, L_000001cb94250b00, C4<0>, C4<0>;
+L_000001cb941d30e0 .functor OR 1, L_000001cb942510a0, L_000001cb942504c0, C4<0>, C4<0>;
+L_000001cb941d34b0 .functor AND 1, L_000001cb94251be0, L_000001cb942507e0, C4<1>, C4<1>;
+v000001cb941f5c50_0 .net *"_ivl_11", 0 0, L_000001cb94251460;  1 drivers
+v000001cb941f52f0_0 .net *"_ivl_13", 0 0, L_000001cb94250b00;  1 drivers
+v000001cb941f5b10_0 .net *"_ivl_14", 0 0, L_000001cb9434ed00;  1 drivers
+v000001cb941f5ed0_0 .net *"_ivl_19", 0 0, L_000001cb942510a0;  1 drivers
+L_000001cb94252028 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v000001cb941f51b0_0 .net/2u *"_ivl_2", 0 0, L_000001cb94252028;  1 drivers
+v000001cb941f5cf0_0 .net *"_ivl_21", 0 0, L_000001cb942504c0;  1 drivers
+v000001cb941f5a70_0 .net *"_ivl_22", 0 0, L_000001cb941d30e0;  1 drivers
+v000001cb941f5f70_0 .net *"_ivl_25", 0 0, L_000001cb94251be0;  1 drivers
+v000001cb941f5bb0_0 .net *"_ivl_27", 0 0, L_000001cb942507e0;  1 drivers
+v000001cb941f5d90_0 .net *"_ivl_30", 0 0, L_000001cb942513c0;  1 drivers
+v000001cb941f57f0_0 .net *"_ivl_32", 3 0, L_000001cb94251500;  1 drivers
+v000001cb941f5250_0 .net *"_ivl_39", 3 0, L_000001cb94251e60;  1 drivers
+v000001cb941f5110_0 .net *"_ivl_40", 4 0, L_000001cb942518c0;  1 drivers
+L_000001cb942520b8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001cb941f54d0_0 .net *"_ivl_43", 0 0, L_000001cb942520b8;  1 drivers
+v000001cb941f5610_0 .net *"_ivl_45", 3 0, L_000001cb942511e0;  1 drivers
+v000001cb941f56b0_0 .net *"_ivl_46", 4 0, L_000001cb94250380;  1 drivers
+L_000001cb94252100 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001cb941f5750_0 .net *"_ivl_49", 0 0, L_000001cb94252100;  1 drivers
+v000001cb941f5890_0 .net *"_ivl_50", 4 0, L_000001cb94251960;  1 drivers
+v000001cb94251d20_0 .net *"_ivl_52", 4 0, L_000001cb942516e0;  1 drivers
+L_000001cb94252148 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
+v000001cb94251140_0 .net *"_ivl_55", 3 0, L_000001cb94252148;  1 drivers
+v000001cb94251000_0 .net *"_ivl_56", 4 0, L_000001cb94250880;  1 drivers
+L_000001cb94252070 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v000001cb94251dc0_0 .net/2u *"_ivl_6", 0 0, L_000001cb94252070;  1 drivers
+o000001cb94207398 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v000001cb94250a60_0 .net "a", 7 0, o000001cb94207398;  0 drivers
+o000001cb942073c8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v000001cb94251640_0 .net "b", 7 0, o000001cb942073c8;  0 drivers
+v000001cb94251320_0 .net "carry_in", 0 0, L_000001cb941d34b0;  1 drivers
+v000001cb94251280_0 .net "sum", 8 0, L_000001cb94251b40;  1 drivers
+L_000001cb94251460 .part o000001cb94207398, 2, 1;
+L_000001cb94250b00 .part o000001cb942073c8, 2, 1;
+L_000001cb942510a0 .part o000001cb94207398, 3, 1;
+L_000001cb942504c0 .part o000001cb942073c8, 3, 1;
+L_000001cb94251be0 .part o000001cb94207398, 3, 1;
+L_000001cb942507e0 .part o000001cb942073c8, 3, 1;
+LS_000001cb94251b40_0_0 .concat8 [ 1 1 1 1], L_000001cb94252028, L_000001cb94252070, L_000001cb9434ed00, L_000001cb941d30e0;
+LS_000001cb94251b40_0_4 .concat8 [ 4 1 0 0], L_000001cb94251500, L_000001cb942513c0;
+L_000001cb94251b40 .concat8 [ 4 5 0 0], LS_000001cb94251b40_0_0, LS_000001cb94251b40_0_4;
+L_000001cb942513c0 .part L_000001cb94250880, 4, 1;
+L_000001cb94251500 .part L_000001cb94250880, 0, 4;
+L_000001cb94251e60 .part o000001cb94207398, 4, 4;
+L_000001cb942518c0 .concat [ 4 1 0 0], L_000001cb94251e60, L_000001cb942520b8;
+L_000001cb942511e0 .part o000001cb942073c8, 4, 4;
+L_000001cb94250380 .concat [ 4 1 0 0], L_000001cb942511e0, L_000001cb94252100;
+L_000001cb94251960 .arith/sum 5, L_000001cb942518c0, L_000001cb94250380;
+L_000001cb942516e0 .concat [ 1 4 0 0], L_000001cb941d34b0, L_000001cb94252148;
+L_000001cb94250880 .arith/sum 5, L_000001cb94251960, L_000001cb942516e0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "hoeraa.v";
