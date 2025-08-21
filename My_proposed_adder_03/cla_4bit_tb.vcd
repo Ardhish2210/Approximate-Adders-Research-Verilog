@@ -1,0 +1,198 @@
+$date
+	Tue Aug 19 03:27:43 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_cla_4bit $end
+$var wire 4 ! sum [3:0] $end
+$var wire 1 " cout $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$var reg 1 % cin $end
+$scope module uut $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 1 % cin $end
+$var wire 1 " cout $end
+$var wire 4 ( g [3:0] $end
+$var wire 4 ) p [3:0] $end
+$var wire 4 * sum [3:0] $end
+$var wire 4 + c [4:1] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bz000 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#10000
+b1 !
+b1 *
+1%
+#20000
+b1111 )
+b1111 !
+b1111 *
+b101 $
+b101 '
+b1010 #
+b1010 &
+0%
+#30000
+bz111 +
+1"
+b0 !
+b0 *
+1%
+#40000
+bz111 +
+1"
+b1110 )
+b1 (
+b0 !
+b0 *
+b1 $
+b1 '
+b1111 #
+b1111 &
+0%
+#50000
+b1 !
+b1 *
+1%
+#60000
+b0 )
+b1111 (
+b1110 !
+b1110 *
+b1111 $
+b1111 '
+0%
+#70000
+b1111 !
+b1111 *
+1%
+#80000
+0"
+b110 !
+b110 *
+bz001 +
+b101 )
+b0 (
+b1 $
+b1 '
+b100 #
+b100 &
+#90000
+1"
+bz111 +
+b1 !
+b1 *
+b1110 )
+b1 (
+b1101 $
+b1101 '
+b11 #
+b11 &
+#100000
+0"
+b1000 !
+b1000 *
+bz111 +
+b111 )
+b0 (
+b10 $
+b10 '
+b101 #
+b101 &
+#110000
+1"
+b100 !
+b100 *
+b1011 )
+b100 (
+b110 $
+b110 '
+b1101 #
+b1101 &
+#120000
+bz101 +
+b1010 !
+b1010 *
+b1 )
+b1100 (
+b1100 $
+b1100 '
+#130000
+0"
+bz100 +
+b1011 !
+b1011 *
+b11 )
+b100 (
+0%
+b101 $
+b101 '
+b110 #
+b110 &
+#140000
+b1100 !
+b1100 *
+bz111 +
+b10 )
+b101 (
+b111 $
+b111 '
+b101 #
+b101 &
+#150000
+1"
+b1 !
+b1 *
+bz110 +
+b1101 )
+b10 (
+b10 $
+b10 '
+b1111 #
+b1111 &
+#160000
+b1101 !
+b1101 *
+0"
+bz000 +
+b0 (
+b101 $
+b101 '
+b1000 #
+b1000 &
+#170000
+1"
+bz101 +
+b1011 !
+b1011 *
+b0 )
+b1101 (
+1%
+b1101 $
+b1101 '
+b1101 #
+b1101 &
+#180000

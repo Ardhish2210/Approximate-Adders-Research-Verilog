@@ -1,0 +1,248 @@
+$date
+	Sat Aug 16 13:57:14 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module ripple_carry_adder_tb $end
+$var wire 9 ! sum [8:0] $end
+$var reg 8 " a [7:0] $end
+$var reg 8 # b [7:0] $end
+$scope module uut $end
+$var wire 8 $ a [7:0] $end
+$var wire 8 % b [7:0] $end
+$var wire 9 & sum [8:0] $end
+$var wire 1 ' c6 $end
+$var wire 1 ( c5 $end
+$var wire 1 ) c4 $end
+$var wire 1 * c3 $end
+$var wire 1 + c2 $end
+$var wire 1 , c1 $end
+$var wire 1 - c0 $end
+$scope module f0 $end
+$var wire 1 . a $end
+$var wire 1 / b $end
+$var wire 1 0 cin $end
+$var wire 1 - cout $end
+$var wire 1 1 sum $end
+$upscope $end
+$scope module f1 $end
+$var wire 1 2 a $end
+$var wire 1 3 b $end
+$var wire 1 - cin $end
+$var wire 1 , cout $end
+$var wire 1 4 sum $end
+$upscope $end
+$scope module f2 $end
+$var wire 1 5 a $end
+$var wire 1 6 b $end
+$var wire 1 , cin $end
+$var wire 1 + cout $end
+$var wire 1 7 sum $end
+$upscope $end
+$scope module f3 $end
+$var wire 1 8 a $end
+$var wire 1 9 b $end
+$var wire 1 + cin $end
+$var wire 1 * cout $end
+$var wire 1 : sum $end
+$upscope $end
+$scope module f4 $end
+$var wire 1 ; a $end
+$var wire 1 < b $end
+$var wire 1 * cin $end
+$var wire 1 ) cout $end
+$var wire 1 = sum $end
+$upscope $end
+$scope module f5 $end
+$var wire 1 > a $end
+$var wire 1 ? b $end
+$var wire 1 ) cin $end
+$var wire 1 ( cout $end
+$var wire 1 @ sum $end
+$upscope $end
+$scope module f6 $end
+$var wire 1 A a $end
+$var wire 1 B b $end
+$var wire 1 ( cin $end
+$var wire 1 ' cout $end
+$var wire 1 C sum $end
+$upscope $end
+$scope module f7 $end
+$var wire 1 D a $end
+$var wire 1 E b $end
+$var wire 1 ' cin $end
+$var wire 1 F cout $end
+$var wire 1 G sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+14
+1:
+11
+b1111 !
+b1111 &
+17
+13
+19
+1.
+15
+b1010 #
+b1010 %
+b101 "
+b101 $
+#20
+1C
+1(
+1)
+07
+b1001011 !
+b1001011 &
+0@
+1/
+03
+1<
+0.
+12
+05
+1;
+1>
+b11001 #
+b11001 %
+b110010 "
+b110010 $
+#30
+0C
+0(
+1F
+1@
+0)
+01
+04
+b100101100 !
+b100101100 &
+17
+1'
+0/
+0<
+1B
+1E
+02
+15
+0;
+1A
+b11001000 #
+b11001000 %
+b1100100 "
+b1100100 $
+#40
+1(
+0@
+1)
+1*
+0:
+1+
+07
+1F
+1,
+0G
+1'
+1-
+0C
+04
+b100000000 !
+b100000000 &
+0=
+1/
+09
+0B
+0E
+1.
+12
+18
+1;
+1D
+b1 #
+b1 %
+b11111111 "
+b11111111 $
+#50
+0-
+04
+0,
+07
+0+
+0:
+0*
+0=
+0)
+0@
+0(
+b100000000 !
+b100000000 &
+0C
+0'
+0/
+1E
+0.
+02
+05
+08
+0;
+0>
+0A
+b10000000 #
+b10000000 %
+b10000000 "
+b10000000 $
+#60
